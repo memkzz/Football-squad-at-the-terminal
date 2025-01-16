@@ -7,19 +7,32 @@ public class Club {
     private String name;
     private int yearOfFoundation;
     private String stadium;
-    private Player[] squad;
+    private List<Player> squad;
 
     public Club(String name, int yearOfFoundation, String stadium, Player[] squad) {
         this.name = name;
         this.yearOfFoundation = yearOfFoundation;
         this.stadium = stadium;
-        this.squad = squad;
+        this.squad = new ArrayList<>();
+
     }
 
     public Club(String name, int yearOfFoundation, String stadium) {
         this.name = name;
         this.yearOfFoundation = yearOfFoundation;
         this.stadium = stadium;
+        this.squad = new ArrayList<>();
+
+    }
+    public void printSquad(){
+        for (Player players : squad){
+            System.out.println(players.getGameName());
+        }
+    }
+    public void addPlayer(Player player){
+        this.squad.add(player);
+    }
+    public void printSquade(){
 
     }
 
@@ -49,11 +62,12 @@ public class Club {
         this.stadium = stadium;
     }
 
-    public Player[] getSquad() {
+    public List<Player> getSquad() {
         return squad;
     }
 
-    public void setSquad(Player[] squad) {
+    public void setSquad(List<Player> squad) {
         this.squad = squad;
     }
+
 }

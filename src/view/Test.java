@@ -1,10 +1,25 @@
 package view;
 
+import domain.Club;
+import domain.Foot;
+import domain.Player;
+import domain.Status;
+import domain.Register;
+import domain.SpecificPosition;
+import domain.Position;
+import domain.PrimaryPosition;
+
 import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Club fluminense = new Club("Fluminense Footbal Club", 1902, "Maracanã");
+        Player fabio = new Player("Fábio Deivson Lopes Maciel", "Fábio", 44, "1,88",
+                PrimaryPosition.DEFENSE, SpecificPosition.GOALKEEPER,
+                Foot.RIGHT_FOOT, 100000, Status.BELONGING, "31/12/2025",
+                "Brazilian", fluminense);
+        fluminense.addPlayer(fabio);
 
         String title = "                FUTEBOL INFO SYSTEM";
         String line = "----------------------------------------------------------" ;
@@ -19,6 +34,8 @@ public class Test {
         String choice1 = "Fluminense Footbal Club";
         String choice2 = "Liverpool";
         String choice3 = "Borussia Dortmund";
+
+        String casflu = "Fluminense Footbal Club Cast";
 
         System.out.println(line);
         System.out.println(title);
@@ -44,6 +61,9 @@ public class Test {
 
         switch (interaction2){
             case 1:
+                System.out.println(casflu);
+                fluminense.printSquad();
+
         }
 
         scanner.close();

@@ -2,6 +2,7 @@ package domain;
 
 public class Player {
     private String name;
+    private String gameName;
     private int age;
     private String height;
     private PrimaryPosition primaryPosition;
@@ -11,10 +12,12 @@ public class Player {
     private Status status;
     private String endOfContract;
     private String nacionality;
+    private Club club;
 
 
-    public Player(String name, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality) {
+    public Player(String name,String gameName, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality, Club club) {
         this.name = name;
+        this.gameName = gameName;
         this.age = age;
         this.height = height;
         this.primaryPosition = primaryPosition;
@@ -24,6 +27,7 @@ public class Player {
         this.status = status;
         this.endOfContract = endOfContract;
         this.nacionality = nacionality;
+        this.club = club;
 
     }
 
@@ -116,5 +120,22 @@ public class Player {
 
     public void setEndOfContract(String endOfContract) {
         this.endOfContract = endOfContract;
+
+    }
+
+    public Club getClub() {
+        return club;
+    }
+
+    public void setClub(Club club) {
+        this.club = club;
+    }
+
+    public String getGameName() {
+        return gameName;
+    }
+
+    public void setGameName(String gameName) {
+        this.gameName = gameName;
     }
 }
