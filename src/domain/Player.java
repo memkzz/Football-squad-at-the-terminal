@@ -11,9 +11,9 @@ public class Player {
     private Status status;
     private String endOfContract;
     private String nacionality;
-    private Club club;
 
-    public Player(String name, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality, Club club) {
+
+    public Player(String name, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality) {
         this.name = name;
         this.age = age;
         this.height = height;
@@ -24,7 +24,7 @@ public class Player {
         this.status = status;
         this.endOfContract = endOfContract;
         this.nacionality = nacionality;
-        this.club = club;
+
     }
 
     public void print(){
