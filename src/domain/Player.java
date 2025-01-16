@@ -10,8 +10,10 @@ public class Player {
     private float marketValue;
     private Status status;
     private String endOfContract;
+    private String nacionality;
+    private Club club;
 
-    public Player(String name, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract) {
+    public Player(String name, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality, Club club) {
         this.name = name;
         this.age = age;
         this.height = height;
@@ -21,6 +23,8 @@ public class Player {
         this.marketValue = marketValue;
         this.status = status;
         this.endOfContract = endOfContract;
+        this.nacionality = nacionality;
+        this.club = club;
     }
 
     public void print(){
@@ -32,6 +36,14 @@ public class Player {
         System.out.println("Market Value: "+this.marketValue);
         System.out.println("Status: "+this.status);
         System.out.println("End of Contract: "+this.endOfContract);
+    }
+
+    public String getNacionality() {
+        return nacionality;
+    }
+
+    public void setNacionality(String nacionality) {
+        this.nacionality = nacionality;
     }
 
     public String getName() {
