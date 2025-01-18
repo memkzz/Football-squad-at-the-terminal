@@ -4,9 +4,7 @@ import domain.Club;
 import domain.Foot;
 import domain.Player;
 import domain.Status;
-import domain.Register;
 import domain.SpecificPosition;
-import domain.Position;
 import domain.PrimaryPosition;
 
 import java.util.Scanner;
@@ -15,11 +13,17 @@ public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Club fluminense = new Club("Fluminense Footbal Club", 1902, "Maracanã");
+
         Player fabio = new Player("Fábio Deivson Lopes Maciel", "Fábio", 44, "1,88",
                 PrimaryPosition.DEFENSE, SpecificPosition.GOALKEEPER,
                 Foot.RIGHT_FOOT, 100000, Status.BELONGING, "31/12/2025",
                 "Brazilian", fluminense);
         fluminense.addPlayer(fabio);
+
+        Player cano = new Player("Germán Ezequiel Cano", "Cano", 36, "1,76",
+                PrimaryPosition.ATTACK, SpecificPosition.CENTER_WINGER,Foot.RIGHT_FOOT,1000000,Status.BELONGING,"32/12,2015",
+                "Brazilian", fluminense);
+        fluminense.addPlayer(cano);
 
         String title = "                FUTEBOL INFO SYSTEM";
         String line = "----------------------------------------------------------" ;
