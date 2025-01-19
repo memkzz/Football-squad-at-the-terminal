@@ -1,9 +1,11 @@
 package domain;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Player {
     private String name;
     private String gameName;
-    private int age;
+    private LocalDate birthDate;
     private String height;
     private PrimaryPosition primaryPosition;
     private SpecificPosition specificPosition;
@@ -15,10 +17,10 @@ public class Player {
     private Club club;
 
 
-    public Player(String name,String gameName, int age, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality, Club club) {
+    public Player(String name,String gameName, LocalDate birthDate, String height, PrimaryPosition primaryPosition, SpecificPosition specificPosition, Foot foot, float marketValue, Status status, String endOfContract, String nacionality, Club club) {
         this.name = name;
         this.gameName = gameName;
-        this.age = age;
+        this.birthDate = birthDate;
         this.height = height;
         this.primaryPosition = primaryPosition;
         this.specificPosition = specificPosition;
@@ -33,7 +35,7 @@ public class Player {
 
     public void print(){
         System.out.println("Name: "+this.name);
-        System.out.println("Age: "+this.age);
+        System.out.println("Age: "+this.birthDate);
         System.out.println("Height: "+this.height);
         System.out.println("Position: "+this.primaryPosition+" As a "+specificPosition);
         System.out.println("Dominant Foot: "+this.height);
@@ -58,13 +60,7 @@ public class Player {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public String getHeight() {
         return height;
@@ -137,5 +133,13 @@ public class Player {
 
     public void setGameName(String gameName) {
         this.gameName = gameName;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }

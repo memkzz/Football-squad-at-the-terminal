@@ -7,6 +7,7 @@ import domain.Status;
 import domain.SpecificPosition;
 import domain.PrimaryPosition;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Test {
@@ -14,13 +15,13 @@ public class Test {
         Scanner scanner = new Scanner(System.in);
         Club fluminense = new Club("Fluminense Footbal Club", 1902, "Maracanã");
 
-        Player fabio = new Player("Fábio Deivson Lopes Maciel", "Fábio", 44, "1,88",
+        Player fabio = new Player("Fábio Deivson Lopes Maciel", "Fábio", LocalDate.of(2000,12,21), "1,88",
                 PrimaryPosition.DEFENSE, SpecificPosition.GOALKEEPER,
                 Foot.RIGHT_FOOT, 100000, Status.BELONGING, "31/12/2025",
                 "Brazilian", fluminense);
         fluminense.addPlayer(fabio);
 
-        Player cano = new Player("Germán Ezequiel Cano", "Cano", 36, "1,76",
+        Player cano = new Player("Germán Ezequiel Cano", "Cano", LocalDate.of(2000,12,21), "1,76",
                 PrimaryPosition.ATTACK, SpecificPosition.CENTER_WINGER,Foot.RIGHT_FOOT,1000000,Status.BELONGING,"32/12,2015",
                 "Brazilian", fluminense);
         fluminense.addPlayer(cano);
